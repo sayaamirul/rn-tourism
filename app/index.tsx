@@ -1,15 +1,19 @@
-import { Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
+import { tourismData } from "@/data/tourismData";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <ScrollView className="flex">
+      {tourismData.map((item) => (
+        <View className="rounded-lg border border-gray-200 p-4 shadow">
+          <Image
+            source={item.imageUrl}
+            resizeMode="cover"
+            className="h-64 w-full"
+          />
+          <Text className="font-bold text-2xl">{item.name}</Text>
+        </View>
+      ))}
+    </ScrollView>
   );
 }
