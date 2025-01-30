@@ -1,11 +1,11 @@
 export interface TouristDestination {
-  id: number;
+  id: number | string;
   name: string;
   country: string;
   description: string;
   rating: number;
   annualVisitors: number;
-  imageUrl: string;
+  image: any;
 }
 
 export const tourismData: TouristDestination[] = [
@@ -16,7 +16,7 @@ export const tourismData: TouristDestination[] = [
     description: "Iconic iron lattice tower on the Champ de Mars in Paris.",
     rating: 4.6,
     annualVisitors: 7000000,
-    imageUrl: require("../assets/images/tourism/eifel.jpg"),
+    image: require("../assets/images/tourism/eifel.jpg"),
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const tourismData: TouristDestination[] = [
     description: "Ancient Incan city set high in the Andes Mountains.",
     rating: 4.8,
     annualVisitors: 1500000,
-    imageUrl: require("../assets/images/tourism/machu-picchu.jpg"),
+    image: require("../assets/images/tourism/machu-picchu.jpg"),
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const tourismData: TouristDestination[] = [
       "Series of fortifications and walls built across the historical northern borders of ancient Chinese states.",
     rating: 4.7,
     annualVisitors: 10000000,
-    imageUrl: require("../assets/images/tourism/great-wall-of-china.jpg"),
+    image: require("../assets/images/tourism/great-wall-of-china.jpg"),
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const tourismData: TouristDestination[] = [
       "Ivory-white marble mausoleum on the right bank of the river Yamuna in Agra.",
     rating: 4.7,
     annualVisitors: 8000000,
-    imageUrl: require("../assets/images/tourism/taj-mahal.jpg"),
+    image: require("../assets/images/tourism/taj-mahal.jpg"),
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ export const tourismData: TouristDestination[] = [
       "Beautiful island known for its stunning sunsets, white-washed buildings, and blue-domed churches.",
     rating: 4.9,
     annualVisitors: 2000000,
-    imageUrl: require("../assets/images/tourism/santorini.jpg"),
+    image: require("../assets/images/tourism/santorini.jpg"),
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ export const tourismData: TouristDestination[] = [
     description: "Steep-sided canyon carved by the Colorado River in Arizona.",
     rating: 4.8,
     annualVisitors: 6000000,
-    imageUrl: require("../assets/images/tourism/grand-canyon.jpg"),
+    image: require("../assets/images/tourism/grand-canyon.jpg"),
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export const tourismData: TouristDestination[] = [
       "Famous archaeological site containing rock-cut architecture and water conduit system.",
     rating: 4.8,
     annualVisitors: 1000000,
-    imageUrl: require("../assets/images/tourism/petra.jpg"),
+    image: require("../assets/images/tourism/petra.jpg"),
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ export const tourismData: TouristDestination[] = [
       "Beautiful island known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs.",
     rating: 4.6,
     annualVisitors: 6000000,
-    imageUrl: require("../assets/images/tourism/bali.jpg"),
+    image: require("../assets/images/tourism/bali.jpg"),
   },
   {
     id: 9,
@@ -94,7 +94,7 @@ export const tourismData: TouristDestination[] = [
       "Oval amphitheatre in the centre of Rome, the largest ancient amphitheatre ever built.",
     rating: 4.7,
     annualVisitors: 7600000,
-    imageUrl: require("../assets/images/tourism/colosseum.jpg"),
+    image: require("../assets/images/tourism/colosseum.jpg"),
   },
   {
     id: 10,
@@ -104,6 +104,6 @@ export const tourismData: TouristDestination[] = [
       "Huge Buddhist temple complex surrounded by a moat and concentric walls.",
     rating: 4.8,
     annualVisitors: 2200000,
-    imageUrl: require("../assets/images/tourism/angkor-wat.jpg"),
+    image: require("../assets/images/tourism/angkor-wat.jpg"),
   },
 ];

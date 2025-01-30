@@ -1,19 +1,29 @@
-import { Image, ScrollView, Text, View } from "react-native";
-import { tourismData } from "@/data/tourismData";
+import {
+  FlatList,
+  Image,
+  ListRenderItem,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
+import { tourismData, TouristDestination } from "@/data/tourismData";
+import TourismCard from "@/components/TourismCard";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  const renderItem: ListRenderItem<TouristDestination> = ({ item }) => (
+    <TourismCard item={item} />
+  );
   return (
-    <ScrollView className="flex">
-      {tourismData.map((item) => (
-        <View className="rounded-lg border border-gray-200 p-4 shadow">
-          <Image
-            source={item.imageUrl}
-            resizeMode="cover"
-            className="h-64 w-full"
-          />
-          <Text className="font-bold text-2xl">{item.name}</Text>
-        </View>
-      ))}
-    </ScrollView>
+    <SafeAreaView className="flex-1">
+      <FlatList
+        numColumns={2}
+        data={tourismData}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={TourismCard}
+        columnWrapperStyle={{ justifyContent: "space-between" }}
+        contentContainerStyle={{ padding: 8 }}
+      />
+    </SafeAreaView>
   );
 }
